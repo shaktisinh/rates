@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="data"
+            type="com.shaktisinh.test.data.model.Rate" />
+
+        <variable
+            name="viewModel"
+            type="com.shaktisinh.test.ui.main.MainViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp10">
+
+        <ImageView
+            android:id="@+id/ivFlag"
+            android:layout_width="@dimen/flag_size"
+            android:layout_height="@dimen/flag_size"
+            android:layout_alignParentStart="true"
+            android:layout_centerInParent="true"
+            android:contentDescription="@string/app_name"
+            android:scaleType="centerCrop" />
+
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp10"
+            android:layout_marginEnd="@dimen/dp10"
+            android:layout_toStartOf="@+id/etValue"
+            android:layout_toEndOf="@+id/ivFlag"
+            android:padding="@dimen/dp3"
+            android:text="@{data.country}"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/large"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvCountryName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvName"
+            android:layout_marginStart="@dimen/dp10"
+            android:layout_marginEnd="@dimen/dp10"
+            android:layout_toStartOf="@+id/etValue"
+            android:layout_toEndOf="@+id/ivFlag"
+            android:padding="@dimen/dp3"
+            android:text="@{data.name}"
+            android:textSize="@dimen/medium" />
+
+
+        <EditText
+            android:id="@+id/etValue"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="@dimen/dp3"
+            android:inputType="number"
+            android:maxLength="10"
+            android:maxLines="1"
+            android:onTextChanged="@{viewModel::onTextChanged}"
+            android:padding="@dimen/dp5"
+            android:text="@{data.value}"
+            android:textSize="@dimen/large" />
+
+    </RelativeLayout>
+</layout>

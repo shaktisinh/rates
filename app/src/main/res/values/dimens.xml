@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="dp5">5dp</dimen>
+    <dimen name="dp10">10dp</dimen>
+    <dimen name="dp3">3dp</dimen>
+    <dimen name="flag_size">60dp</dimen>
+
+    <dimen name="large">18sp</dimen>
+    <dimen name="medium">16sp</dimen>
+    <dimen name="small">14sp</dimen>
+</resources>
